@@ -19,6 +19,7 @@ public class SimpleInstrest_1 {
 	     
 	     System.out.println("Simple instrate is : " + simpleInterest);
 	     
+	     sc.close();
 	     
 	}
 }
