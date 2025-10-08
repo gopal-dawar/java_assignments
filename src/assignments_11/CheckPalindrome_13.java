@@ -15,13 +15,12 @@ public class CheckPalindrome_13 {
 			return reverse;
 		};
 
-		Supplier<String> name = () -> "naman";
+		Supplier<String> name = () -> "namann";
 		Consumer<String> print = x -> System.out.println(x + " is palindrome");
 		
 		if (name.get().equals(check.apply(name.get()))) {
 			print.accept(name.get());
 		} else {
-
 			System.out.println(name.get() + " is not palindrome");
 		}
 		
