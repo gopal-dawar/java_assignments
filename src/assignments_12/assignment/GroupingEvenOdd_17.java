@@ -27,7 +27,8 @@ public class GroupingEvenOdd_17 {
 
 		System.out.println("using stream ");
 
-		Map<String, List<Integer>>  grouped =number.stream().collect(Collectors.groupingBy(x -> x % 2 != 0 ? "false" : "true"));
+		Map<String, List<Integer>> grouped = number.stream()
+				.collect(Collectors.groupingBy(x -> x % 2 != 0 ? "false" : "true"));
 
 		System.out.println(grouped);
 	}

@@ -22,7 +22,7 @@ public class CheckAllPositive_14 {
 			System.out.println("Negetiv number exist in list!");
 		}
 		System.out.println("using stream");
-
+ 
 		boolean b1 = number.stream().anyMatch(x -> x < 0);
 		if (b1) {
 			System.out.println("Negetiv number exist in list!");

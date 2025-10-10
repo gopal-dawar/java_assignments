@@ -5,19 +5,18 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class FindLongestOutputString_28 {
+public class ShortestStringwithLength_29 {
 	public static void main(String[] args) {
 		List<String> words = Arrays.asList("apple", "banana", "mango", "orange", "grape", "kiwi", "melon", "apple",
 				"mango");
 
 		System.out.println("using loop");
-
 		int le = words.get(0).length();
 		List<String> l = new ArrayList<>();
 		l.add(words.get(0));
 
 		for (int i = 1; i < words.size(); i++) {
-			if (le < words.get(i).length()) {
+			if (le > words.get(i).length()) {
 				le = words.get(i).length();
 				l.clear();
 				l.add(words.get(i));
@@ -25,14 +24,12 @@ public class FindLongestOutputString_28 {
 				l.add(words.get(i));
 			}
 		}
-
-		System.out.println(l + " is highest length and length is : " + le);
+		System.out.println(l.toString() + " is sorted string in list and length is " + le);
 
 		System.out.println("using stream");
-		int lengthofstring = words.stream().mapToInt(String::length).max().orElse(0);
-		List<String> longestWord = words.stream().filter(x -> x.length() == lengthofstring)
-				.collect(Collectors.toList());
-		System.out.println(longestWord.toString() + " is highest length and length is : " + le);
+		int lengthofstring = words.stream().mapToInt(x -> x.length()).min().orElse(0);
+		List<String> list = words.stream().filter(x -> x.length() == lengthofstring).collect(Collectors.toList());
 
+		System.out.println(list + " is sorted string in list and length is " + le);
 	}
 }
