@@ -17,6 +17,7 @@ public class CountApple_26 {
 		System.out.println("'apple' appear " + count);
 		System.out.println("using stream");
 
+		
 		Long l = words.stream().filter(x -> x.equals("apple")).count();
 		System.out.println("'apple' appear " + l);
 	}

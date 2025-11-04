@@ -20,6 +20,7 @@ public class CheckanyContaintz_31 {
 					break;
 				}
 
+				
 			}
 		}
 		System.out.println(b);
