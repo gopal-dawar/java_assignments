@@ -27,7 +27,7 @@ public class GroupUsingLength_33 {
 		System.out.println("4 = " + four.toString());
 		System.out.println("5 = " + five.toString());
 		System.out.println("6 = " + six.toString());
-
+ 
 		System.out.println("using stream");
 		Map<Object, List<String>> g = words.stream().collect(Collectors.groupingBy(x -> {
 			int le = x.length();

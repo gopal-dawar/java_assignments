@@ -13,7 +13,8 @@ public class TotalSalarPerDepartment_40 {
 				new Emp3(107, "Rita", "Operations", 55000));
 
 		Map<String, Double> a = emp.stream()
-				.collect(Collectors.groupingBy(Emp3::getDepartments, Collectors.summingDouble(Emp3::getSalary)));
+				.collect(Collectors
+						.groupingBy(Emp3::getDepartments, Collectors.summingDouble(Emp3::getSalary)));
 
 		System.out.println(a);
 

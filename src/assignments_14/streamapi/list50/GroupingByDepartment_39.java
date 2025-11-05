@@ -11,7 +11,7 @@ public class GroupingByDepartment_39 {
 				new Emp2(103, "Priya", "Finance", 75000), new Emp2(104, "Amit", "IT", 62000),
 				new Emp2(105, "Neha", "Marketing", 58000), new Emp2(106, "Suresh", "Finance", 70000),
 				new Emp2(107, "Rita", "Operations", 55000));
-
+ 
 		Map<String, List<Emp2>> group = emp.stream().collect(Collectors.groupingBy(Emp2::getDepartments));
 
 		System.out.println(group);

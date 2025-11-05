@@ -9,7 +9,7 @@ public class CheckAllMorethen3_32 {
 				"mango");
 
 		System.out.println("using loop");
-		boolean b = false;
+		boolean b = false; 
 		for (String n : words) {
 			if (n.length() < 3) {
 				b = true;

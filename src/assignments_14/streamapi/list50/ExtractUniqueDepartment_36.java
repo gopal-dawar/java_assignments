@@ -13,7 +13,7 @@ public class ExtractUniqueDepartment_36 {
 				new Employee(107, "Rita", "Operations"));
 
 		List<String> i = employees.stream().map(Employee::getDepartment).distinct().collect(Collectors.toList());
-		;
+		
 		System.out.println(i);
 	}
 }
