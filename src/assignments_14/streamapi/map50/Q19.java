@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Q11 {
+public class Q19 {
 	public static void main(String[] args) {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("Apple", 10);
@@ -17,7 +17,8 @@ public class Q11 {
 		map.put("Mango", 70);
 		map.put("Papaya", 80);
 
-		List<String> s = map.entrySet().stream().map(x -> x.getKey() + "=" + x.getValue()).collect(Collectors.toList());
-		System.out.println(s);
+		List<Integer> list = map.entrySet().stream().map(x -> x.getValue()).collect(Collectors.toList());
+		System.out.println(list);
+
 	}
 }

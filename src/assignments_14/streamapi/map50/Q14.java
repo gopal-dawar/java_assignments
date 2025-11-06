@@ -1,11 +1,9 @@
 package assignments_14.streamapi.map50;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
-public class Q11 {
+public class Q14 {
 	public static void main(String[] args) {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("Apple", 10);
@@ -16,8 +14,9 @@ public class Q11 {
 		map.put("Kiwi", 60);
 		map.put("Mango", 70);
 		map.put("Papaya", 80);
+		map.put("ps", 100);
 
-		List<String> s = map.entrySet().stream().map(x -> x.getKey() + "=" + x.getValue()).collect(Collectors.toList());
-		System.out.println(s);
+		boolean b = map.entrySet().stream().anyMatch(x -> x.getValue() == 100);
+		System.out.println(b);
 	}
 }
