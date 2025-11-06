@@ -1,10 +1,10 @@
 package assignments_14.streamapi.map50;
 
-import java.util.Comparator;
+import java.awt.RenderingHints.Key;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Q21 {
+public class Q35 {
 	public static void main(String[] args) {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("Cherry", 30);
@@ -16,7 +16,10 @@ public class Q21 {
 		map.put("Mango", 70);
 		map.put("Apple", 10);
 
-		map.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey)).forEach(System.out::println);
+		Map<String, Object> map2 = new HashMap<>();
+		map2.put("Hi", 2332);
 		
+
+
 	}
 }

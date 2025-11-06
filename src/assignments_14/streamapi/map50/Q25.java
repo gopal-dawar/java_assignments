@@ -2,9 +2,12 @@ package assignments_14.streamapi.map50;
 
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
-public class Q21 {
+public class Q25 {
 	public static void main(String[] args) {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("Cherry", 30);
@@ -16,7 +19,7 @@ public class Q21 {
 		map.put("Mango", 70);
 		map.put("Apple", 10);
 
-		map.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey)).forEach(System.out::println);
-		
+		List<Integer> list = map.entrySet().stream().map(x -> x.getValue()).sorted().collect(Collectors.toList());
+		System.out.println(list);
 	}
 }
