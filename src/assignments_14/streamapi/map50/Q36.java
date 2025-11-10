@@ -2,9 +2,8 @@ package assignments_14.streamapi.map50;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 
-public class Q35 {
+public class Q36 {
 	public static void main(String[] args) {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("Cherry", 30);
@@ -16,8 +15,8 @@ public class Q35 {
 		map.put("Mango", 70);
 		map.put("Apple", 10);
 
-		String line = map.entrySet().stream().map(x -> x.getKey() + x.getValue()).collect(Collectors.joining("-"));
-		System.out.println(line);
+		String sub = "App";
 
+		map.entrySet().stream().filter(x -> x.getKey().contains(sub)).forEach(System.out::println);
 	}
 }
